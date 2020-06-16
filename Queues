@@ -1,0 +1,33 @@
+class Queue {
+  constructor(){
+  this.collection = [];
+  }
+   print() {
+    console.log(collection);
+  };
+
+  enqueue(e){
+   this.collection.push(e);
+  }
+
+ dequeue(){
+  return (this.collection.shift());
+  }
+front(){
+  return( this.collection[0]);
+}
+size(){
+return(this.collection.length);
+}
+isEmpty(){
+  if(this.collection.length===0)
+  {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
+}
+
+}
