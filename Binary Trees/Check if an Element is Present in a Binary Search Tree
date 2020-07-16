@@ -1,0 +1,47 @@
+var displayTree = tree => console.log(JSON.stringify(tree, null, 2));
+function Node(value) {
+  this.value = value;
+  this.left = null;
+  this.right = null;
+}
+class BinarySearchTree {
+  constructor()
+  {
+  this.root = null;
+  }
+  // change code below this line
+    isPresent(value)
+    {
+      if(!this.root)
+      {
+        return(false)
+      }
+     else
+     {
+     let currentNode = this.root;
+
+     while(currentNode)
+     {
+     if(currentNode.value===value)
+     {
+    return true;
+     }
+     else if(currentNode.value>value)
+     {
+       currentNode = currentNode.left
+     }
+     else
+     {
+       currentNode= currentNode.right
+     }
+
+     }
+
+  return false
+
+     } 
+
+    }
+   
+  // change code above this line
+}
