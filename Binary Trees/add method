@@ -1,0 +1,84 @@
+Add a New Element to a Binary Search Tree
+
+var displayTree = tree => console.log(JSON.stringify(tree, null, 2));
+function Node(value) {
+  this.value = value;
+  this.left = null;
+  this.right = null;
+}
+class BinarySearchTree 
+{
+  constructor()
+  {
+  this.root = null;
+  // change code below this line
+  }
+
+  add(element)
+ {   
+ if(!this.root)
+ {
+   this.root = new Node(element)
+ }
+
+ else
+ {
+ let currentNode;
+currentNode=this.root;
+ 
+while(currentNode)
+{
+   if(element<currentNode.value)
+   {
+    if(!currentNode.left)
+    {
+      currentNode.left = new Node(element)
+      return undefined
+    }
+    else
+    {
+      currentNode = currentNode.left
+    }
+   }
+else if( element>currentNode.value)
+{
+   if(!currentNode.right)
+   {
+     currentNode.right = new Node(element);
+     return undefined;
+   }
+
+   else
+   {
+      currentNode = currentNode.right;
+
+   }
+
+
+
+}
+
+else
+{
+  return null;
+}
+
+
+} 
+
+
+  
+
+ }
+
+
+
+
+
+ }
+
+
+
+
+  // change code above this line
+}
