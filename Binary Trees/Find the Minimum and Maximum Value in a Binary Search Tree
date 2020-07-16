@@ -1,0 +1,75 @@
+var displayTree = tree => console.log(JSON.stringify(tree, null, 2));
+function Node(value) {
+  this.value = value;
+  this.left = null;
+  this.right = null;
+}
+class BinarySearchTree
+ {
+   constructor()
+   {
+       this.root = null;
+   }
+   // change code below this line
+findMin()
+  {
+     if(this.root===null)
+     {
+       return null
+     }
+     else
+     {
+   let currentNode = this.root;
+  while(currentNode)
+  {
+     if(!currentNode.left)
+     {
+       return currentNode.value;
+     }
+     else
+     {
+    currentNode= currentNode.left
+
+     }
+
+
+  }
+
+     }
+
+  }
+   
+  
+  findMax()
+  {
+     if(this.root===null)
+     {
+       return null
+     }
+     else
+     {
+   let currentNode = this.root;
+  while(currentNode)
+  {
+     if(!currentNode.right)
+     {
+       return currentNode.value;
+     }
+     else
+     {
+    currentNode= currentNode.right
+
+     }
+
+
+  }
+
+     }
+
+  }
+
+
+
+
+  // change code above this line
+}
